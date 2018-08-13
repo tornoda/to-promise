@@ -19,7 +19,7 @@ git clone https://github.com/tornoda/to-promise
 2. 在需要用到的地方引入
 
 ```
-import toPromise from '/module/src/index'
+import toPromise from '/module/to-promise/src/index'
 ```
 
 3. 绑定微信全局对象(`wx`)到函数，以便可以取到微信得API
@@ -37,7 +37,7 @@ const request = toPromiseWx('request')
 举例：
 
 ```
-import toPromise from 'to-promise'
+import toPromise from '/module/to-promise/src/index'
 
 //转换wx.getStorage()
 const getStorage = toPromsie(wx)('getStorage') 
@@ -109,7 +109,7 @@ wx.getLocation({
 2. 多次异步操作调用，且每下一次调用都会用到前一次返回的结果。
 如：获得GPS信息后，根据GPS信息获取天气信息，取得天气信息后立马存入localStorage。
 ```
-import toPromise from 'to-promise'
+import toPromise from '/module/to-promise/src/index'
 
 const toPromiseWx = toPrmise(wx)
 
