@@ -3,25 +3,21 @@
 优点：
 
 1. 避免小程序异步编程多次回调带来的过多回调导致逻辑不清晰，篇幅过长等问题。
-2. 借助于Promise异步编程特点，支持链式操作，像同步一样得写异步。
-3. 转化后得API几乎和微信官方得API一样，如果本身熟悉Promise，那么学习几乎无成本。
+2. 借助于Promise异步编程特点，支持链式操作，像同步一样写异步。
+3. 转化后得API几乎和微信官方API一样。
 
 使用方法： 
 
 1. 安装
 
-- 使用npm 
+- 使用`git`安装到`项目根目录/module`,
 ```
-npm install --save to-promise
+git clone https://github.com/tornoda/to-promise
 ```
 - 或直接下载放入项目目录下如：`/module`
 
 2. 在需要用到的地方引入
-- 使用npm安装时：
-```
-import toPromise from 'to-promise'
-```
-- 如果你是使用下载的方式：
+
 ```
 import toPromise from '/module/src/index'
 ```
@@ -35,6 +31,7 @@ const toPromiseWx = toPromise(wx)
 ```
 //apiName为微信异步方法名，如对wx.request()进行转化
 const request = toPromiseWx('request')
+//直接使用request方法
 ```
 
 举例：
@@ -61,7 +58,7 @@ getStorage({ key: 'test' })
   )
 ```
 
-> 关于Promise对象的使用，请参见Promise
+> 关于Promise对象的使用，请参见[Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 API
 
