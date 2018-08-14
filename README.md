@@ -1,12 +1,12 @@
 **`to-promise`是一个转换微信小程序异步API为Promise的一个工具库**
 
-优点：
+# 优点
 
 1. 避免小程序异步编程多次回调带来的过多回调导致逻辑不清晰，篇幅过长等问题。
 2. 借助于Promise异步编程特点，支持链式操作，像同步一样写异步。
 3. 转化后得API几乎和微信官方API一样。
 
-使用方法： 
+# 使用方法
 
 1. 安装
 
@@ -34,7 +34,7 @@ const request = toPromiseWx('request')
 //直接使用request方法
 ```
 
-举例：
+# 举例
 
 ```
 import toPromise from '/module/to-promise/src/index'
@@ -60,7 +60,7 @@ getStorage({ key: 'test' })
 
 > 关于Promise对象的使用，请参见[Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
-API
+# API
 
 - toPromise(global)
 
@@ -103,7 +103,7 @@ wx.getLocation({
 })
 ```
 
-应用场景举例
+# 应用场景举例
 
 1. 单次异步调用，参见API最后
 2. 多次异步操作调用，且每下一次调用都会用到前一次返回的结果。
@@ -176,3 +176,7 @@ wx.getLocation({
 })
 //层层回调，如果逻辑再复杂点，可能就疯了
 ```
+
+# DEMO
+
+用微信web开发者工具打开demo文件夹，查看`/page/index.js` `/utils/promiseApi.js` 和控制台消息
