@@ -4,6 +4,11 @@ import { request, setStorage } from '../../utils/promiseApi'
 
 const DOUYU_API = 'http://open.douyucdn.cn/api/RoomApi/game'
 
+/* 
+  异步获取网络api，并把获取到的数据异步存入到storage
+  同时，处理两次操作发生错误的情况
+*/
+
 Page({
   onReady: () => {
     request({ url: DOUYU_API })//请求网络数据
